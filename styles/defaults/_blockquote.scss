@@ -1,0 +1,20 @@
+/*-- BLOCKQUOTE --*/
+
+blockquote {
+  margin: 2em 2em 0.5em 2em;
+  font-size: $baseUnit * 2;
+  font-style: italic;
+}
+
+blockquote:before {
+    content: open-quote;
+}
+
+blockquote:after {
+    content: close-quote; /*Use 'no-close-quote' to leave open*/
+}
+
+blockquote + p {
+	margin-left: $baseUnit * 4;
+	margin-bottom: $baseUnit * 4;
+}

@@ -1,0 +1,162 @@
+.hero {
+  max-width : 100%;
+  border-bottom : solid 1px $lightGrey;
+  @include paddingTRBL(4);
+  padding-bottom : calc(4em - 1px);
+  @include flexbox;
+  @include flex-direction(column);
+  
+  header {
+    margin-bottom : 0;
+    max-width : 55em;
+  }
+  
+  header p {
+    margin-bottom : 0;
+    padding : 0;
+    min-width : 100%;
+    line-height : 1.5em;
+  }
+  
+  .branding {
+    @include align-self(flex-end);
+    margin-bottom : 2em;
+  }
+}
+
+
+/*-- MEDIA QUERIES --*/
+
+@media all and (max-width: 980px) {
+
+    .hero {
+    
+      .branding {
+      /*@include align-self(flex-start);*/
+      margin-bottom : 2em;
+      
+        img { width : 75%; }
+        
+      }
+      
+      header h1 {
+        font-size : 2em;
+      }
+      
+      header p {
+        font-size : 1.5em;
+      }  
+  }
+
+}
+
+@media all and (max-width: 400px) {
+    .hero {
+      padding : 2em;
+      
+      .branding {@include align-self(flex-start);
+        img { width : 50%;}
+      }
+      header h1 {font-size : 1.5em;}
+      header p {font-size : 1em;}
+    }
+}
+
+
+
+/*-- NAV --*/
+nav#main {
+	padding : 1em;
+	display : flex;
+	justify-content : space-between;
+	span.right {flex : 1;}
+}
+
+.subnav {
+	padding: 1em;	
+	display : flex;
+	@include flexbox;
+}
+
+
+/*-- SEARCH BOX --*/
+
+.searchBox {
+  @extend %clearfix;
+  margin-bottom : 1em;  
+}
+
+.searchBox input {
+  float : left;
+  border-right : 0;
+}
+
+.searchBox input:focus {
+  border-right : 0;
+}
+
+
+.searchBox button {
+  @extend .border2px;
+  margin-right : 2em;
+  border-left : 0;
+}
+
+.searchBox button.clear {
+min-width : 1em;
+border-right : 0;
+min-height : 3em;
+
+	span {padding-right : 0;}
+}
+
+.searchBox * {
+  display : inline;
+}
+
+/*-- FLEXBOX CONTAINERS --*/
+/*-- A container with 2 child containers --*/
+/*-- the container on the left has flex: 1 --*/
+/*-- the container on the right has flex : none --*/
+
+.flex1zero {
+  @include flexbox;
+  align-items: center;
+  div:first-child {flex : 1;}
+  div:last-child {flex : none;}
+}
+
+/*-- POLITI DIVIDER --*/
+
+.politidiv {
+
+height : 7px;
+background: linear-gradient(
+  135deg,  
+  $yellow 20%,
+  $darkBlue 20%,
+  $superDarkBlue 50%
+  /*
+  $pink 20%,
+  $red 20%,
+  $red 50%*/
+);
+
+}
+
+/*-- STICKY SIDEBAR --*/
+
+.stickySideBar {
+  position : fixed;
+  left : 0;
+  /*-- adjust this based on number of buttons --*/
+  /*-- example: 3 buttons = ca. 9em --*/
+  /*-- therefore dist from top = 4.5em (half) --*/
+  
+  top : calc(50%);
+  z-index : 999;
+  
+  button {display : block;margin-bottom : 1px;}
+  button span {padding : 0;margin : 0;}
+}
+
