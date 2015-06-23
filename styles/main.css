@@ -1054,7 +1054,7 @@ select {
   box-sizing: border-box;
   overflow: visible;
   display: block;
-  min-height: 3em; }
+  height: 3em; }
 
 input[type="password"]:focus,
 input[type="search"]:focus,
