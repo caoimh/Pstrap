@@ -62,12 +62,12 @@ textarea,
 select 
 {
 font-size: 1.0em;
-	border: 2px solid $pink;
+	border: 2px solid $mediumGrey;
 	padding : 0.625rem;
 	box-sizing: border-box;
 	overflow:visible;
 	display: block;
-	height : 3em;
+	min-height : 3em;
 }
 input[type="password"]:focus,
 input[type="search"]:focus,

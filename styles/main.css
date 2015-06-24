@@ -1049,12 +1049,12 @@ input[type="radio"],
 textarea,
 select {
   font-size: 1.0em;
-  border: 2px solid #e11281;
+  border: 2px solid #a8a8a8;
   padding: 0.625rem;
   box-sizing: border-box;
   overflow: visible;
   display: block;
-  height: 3em; }
+  min-height: 3em; }
 
 input[type="password"]:focus,
 input[type="search"]:focus,
